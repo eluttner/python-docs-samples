@@ -28,5 +28,5 @@ ADD requirements.txt /app/requirements.txt
 RUN /env/bin/pip install -r /app/requirements.txt
 ADD . /app
 
-CMD gunicorn -b :$PORT mysite.wsgi
+CMD gunicorn -b 0.0.0.0:$PORT mysite.wsgi
 # [END docker]
